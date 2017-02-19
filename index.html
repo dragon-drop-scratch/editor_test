@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Dragon Drop Editor</title>
+    <script></script>
+    <link href="https://file.myfontastic.com/w9GgxFjRhJdCfs83tprnmh/icons.css" rel="stylesheet">
+    <!-- main style . css (file) -->
+    <link href="./css/main-style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="dd_main_e">
+      <div class="dd_main_e_h">
+        <button class="title"><i style="font-size: 30px;vertical-align: sub;padding-right: 5px;" class="i-home"></i>Dragon Drop</button>
+        <button class="button"><i style="vertical-align: middle;padding-right: 5px;" class="i-android-settings"></i>Settings</button>
+        <button class="button"><i style="vertical-align: middle;padding-right: 5px;" class="i-play"></i>Preview</button>
+        <button class="button"><i style="vertical-align: middle;padding-right: 5px;" class="i-unlock-alt-1"></i>Publish</button>
+      </div>
+      <div class="dd_main_e_s">
+        <table>
+          <tr>
+            <td draggable="true" ondragstart="drag(event)" id="text" class="dd_main_e_s-button"><i class="i-article"></i></td>
+            <td draggable="true" ondragstart="drag(event)" id="image" class="dd_main_e_s-button"><i style="font-size: 50px;" class="i-image"></i></td>
+          </tr>
+          <tr>
+            <td draggable="true" ondragstart="drag(event)" id="html" class="dd_main_e_s-button"><i style="font-size: 50px;" class="i-html5"></i></td>
+            <td draggable="true" ondragstart="drag(event)" id="map" class="dd_main_e_s-button"><i style="font-size: 45px;" class="i-pin-map"></i></td>
+          </tr>
+        </table>
+      </div>
+      <div class="page" id="page" ondrop="drop(event)" ondragover="allowDrop(event)">
+        
+      </div>
+      <ul class='custom-menu'>
+        <li data-action = "first">Dragon Drop</li>
+        <hr style="width: 80%;background-color: #CCC;border: 0;height: 1px;">
+        <li data-action = "second"><i style="vertical-align: middle;padding-right: 5px;" class="i-android-settings"></i>Settings</li>
+        <li data-action = "third"><i style="vertical-align: middle;padding-right: 5px;" class="i-user"></i>User</li>
+      </ul>
+      <script>
+        $(document).bind("contextmenu", function (event) {
+          event.preventDefault();
+          $(".custom-menu").finish().toggle(100).
+          css({
+            top: event.pageY + "px",
+            left: event.pageX + "px"
+          });
+        });
 
+        $(document).bind("mousedown", function (e) {
+          if (!$(e.target).parents(".custom-menu").length > 0) {
+            $(".custom-menu").hide(100);
+          }
+        });
+
+        $(".custom-menu li").click(function(){
+          switch($(this).attr("data-action")) {
+            case "first": ; break;
+            case "second": ; break;
+            case "third": ; break;
+          }
+          
+          $(".custom-menu").hide(100);
+        });
+      </script>
+    </div>
+  </body>
+</html>
