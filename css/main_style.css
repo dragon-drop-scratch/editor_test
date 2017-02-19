@@ -1,1 +1,90 @@
 /* Style for the index and for the Editor */
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+#dd_main_e {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #f0f0f0;
+}
+#dd_main_e .dd_main_e_s {
+  height: 100%;
+  background-color: #989898;
+  position: fixed;
+  padding: 5px;
+}
+#dd_main_e .dd_main_e_s-button {
+  width: 70px;
+  height: 70px;
+  background-color: #ddd;
+  font-size: 35px;
+  text-align: center;
+  cursor: pointer;
+}
+#dd_main_e .dd_main_e_h {
+  height: 50px;
+  background-color: #b50000;
+  width: 100%;
+  margin: 0;
+}
+#dd_main_e .dd_main_e_h .button {
+  transition: background-color 0.15s ease;
+  height: 100%;
+  border: 0;
+  background-color: transparent;
+  color: white;
+  float: right;
+  font-size: 15px;
+  cursor: pointer;
+}
+#dd_main_e .dd_main_e_h .button:focus {
+  outline: none;
+  border: none;
+}
+#dd_main_e .dd_main_e_h .button:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#dd_main_e .dd_main_e_h .title {
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+}
+#dd_main_e .dd_main_e_h .title:focus {
+  outline: none;
+  border: none;
+}
+#page {
+  height: 100%;
+  width: 600px;
+  background-color: white;
+  box-shadow: 0 10px 20px #c0c0c0;
+  margin: auto;
+}
+.custom-menu {
+  display: none;
+  z-index: 1000;
+  position: absolute;
+  overflow: hidden;
+  border: 1px solid #CCC;
+  white-space: nowrap;
+  font-family: sans-serif;
+  background: #FFF;
+  color: #333;
+  border-radius: 5px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.custom-menu li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.custom-menu li:hover {
+  background-color: #DEF;
+}
