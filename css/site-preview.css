@@ -24,3 +24,11 @@ body {
   padding: 10px;
   text-align: center;
 }
+
+#back-to-editor {
+  float: right;
+}
+
+#back-to-editor::before {
+  content: ←;
+}
